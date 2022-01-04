@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Button, Form, Table } from 'react-bootstrap';
 import ShowUsersTable from '../ShowUsersTable/ShowUsersTable';
 import './Style.css';
+import { FaLongArrowAltDown, FaLongArrowAltUp } from "react-icons/fa";
+
 const UsersTable = () => {
     const [users, setUsers] = useState([]);
     const [order, setOrder] = useState("ASC");
@@ -80,11 +82,11 @@ const UsersTable = () => {
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
-                        <th onClick={() => sorting("first_name")}>First Name</th>
-                        <th onClick={() => sorting("last_name")}>Last Name</th>
+                        <th onClick={() => sorting("first_name")}>First Name <FaLongArrowAltDown /><FaLongArrowAltUp /></th>
+                        <th onClick={() => sorting("last_name")}>Last Name <FaLongArrowAltDown /><FaLongArrowAltUp /></th>
                         <th onClick={() => sorting("age")}>Age</th>
-                        <th onClick={() => sorting("email")}>Email</th>
-                        <th onClick={() => sorting("web")}>Website</th>
+                        <th onClick={() => sorting("email")}>Email <  FaLongArrowAltDown /><FaLongArrowAltUp /></th>
+                        <th onClick={() => sorting("web")}>Website <FaLongArrowAltDown /><FaLongArrowAltUp /></th>
                     </tr>
                 </thead>
                 <tbody>
